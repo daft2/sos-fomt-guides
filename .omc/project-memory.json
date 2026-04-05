@@ -1,0 +1,251 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1775375538018,
+  "projectRoot": "/Users/daffa/daffa/solid_template",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": ">=22",
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "solid-js",
+        "version": "1.9.5",
+        "category": "frontend"
+      },
+      {
+        "name": "vite",
+        "version": "7.0.0",
+        "category": "build"
+      }
+    ],
+    "packageManager": "pnpm",
+    "runtime": "Node.js 22"
+  },
+  "build": {
+    "buildCommand": "pnpm build",
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": "pnpm dev",
+    "scripts": {
+      "dev": "vite dev",
+      "build": "vite build",
+      "start": "vite start",
+      "preview": "vite preview"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": "type-based"
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "public",
+      "src"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 1,
+      "lastAccessed": 1775375537977,
+      "keyFiles": [
+        "favicon.ico"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 5,
+      "lastAccessed": 1775375537977,
+      "keyFiles": [
+        "app.css",
+        "app.tsx",
+        "entry-client.tsx",
+        "entry-server.tsx",
+        "global.d.ts"
+      ]
+    },
+    "src/components": {
+      "path": "src/components",
+      "purpose": "UI components",
+      "fileCount": 2,
+      "lastAccessed": 1775375537978,
+      "keyFiles": [
+        "Counter.tsx",
+        "Nav.tsx"
+      ]
+    },
+    "src/lib": {
+      "path": "src/lib",
+      "purpose": "Library code",
+      "fileCount": 2,
+      "lastAccessed": 1775375537978,
+      "keyFiles": [
+        "createStorageSignal.ts",
+        "storage.ts"
+      ]
+    },
+    "src/routes": {
+      "path": "src/routes",
+      "purpose": "Route handlers",
+      "fileCount": 3,
+      "lastAccessed": 1775375537978,
+      "keyFiles": [
+        "[...404].tsx",
+        "about.tsx",
+        "index.tsx"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "src/components/Nav.tsx",
+      "accessCount": 4,
+      "lastAccessed": 1775376176960,
+      "type": "file"
+    },
+    {
+      "path": "src/app.css",
+      "accessCount": 4,
+      "lastAccessed": 1775376188569,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 4,
+      "lastAccessed": 1775376190808,
+      "type": "file"
+    },
+    {
+      "path": "src/routes/index.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1775376132216,
+      "type": "file"
+    },
+    {
+      "path": "src/app.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1775376147876,
+      "type": "file"
+    },
+    {
+      "path": "src",
+      "accessCount": 3,
+      "lastAccessed": 1775378835000,
+      "type": "directory"
+    },
+    {
+      "path": "src/lib/createStorageSignal.ts",
+      "accessCount": 2,
+      "lastAccessed": 1775376088539,
+      "type": "file"
+    },
+    {
+      "path": "src/lib/storage.ts",
+      "accessCount": 2,
+      "lastAccessed": 1775376088606,
+      "type": "file"
+    },
+    {
+      "path": "src/components/ThemeToggle.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1775376141142,
+      "type": "file"
+    },
+    {
+      "path": "src/routes/about.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1775376153778,
+      "type": "file"
+    },
+    {
+      "path": "src/routes/[...404].tsx",
+      "accessCount": 2,
+      "lastAccessed": 1775376156254,
+      "type": "file"
+    },
+    {
+      "path": "src/routes/crops/[id].tsx",
+      "accessCount": 2,
+      "lastAccessed": 1775378593058,
+      "type": "file"
+    },
+    {
+      "path": "src/routes/events/[id].tsx",
+      "accessCount": 2,
+      "lastAccessed": 1775378687851,
+      "type": "file"
+    },
+    {
+      "path": "vite.config.ts",
+      "accessCount": 2,
+      "lastAccessed": 1775378698701,
+      "type": "file"
+    },
+    {
+      "path": "src/components/LanguageToggle.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1775378829484,
+      "type": "file"
+    },
+    {
+      "path": "tsconfig.json",
+      "accessCount": 1,
+      "lastAccessed": 1775375623806,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Counter.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1775375640219,
+      "type": "file"
+    },
+    {
+      "path": "src/lib/theme.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775376100842,
+      "type": "file"
+    },
+    {
+      "path": "src/data/items.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775376107109,
+      "type": "file"
+    },
+    {
+      "path": "src/data",
+      "accessCount": 1,
+      "lastAccessed": 1775378544786,
+      "type": "directory"
+    },
+    {
+      "path": "src/lib/i18n.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775378812318,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
