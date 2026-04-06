@@ -217,6 +217,12 @@
       "type": "file"
     },
     {
+      "path": "wrangler.json",
+      "accessCount": 2,
+      "lastAccessed": 1775444394826,
+      "type": "file"
+    },
+    {
       "path": "tsconfig.json",
       "accessCount": 1,
       "lastAccessed": 1775375623806,
@@ -250,12 +256,6 @@
       "path": "src/lib/i18n.ts",
       "accessCount": 1,
       "lastAccessed": 1775378812318,
-      "type": "file"
-    },
-    {
-      "path": "wrangler.json",
-      "accessCount": 1,
-      "lastAccessed": 1775444146225,
       "type": "file"
     }
   ],
