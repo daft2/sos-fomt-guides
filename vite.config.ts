@@ -7,6 +7,6 @@ export default defineConfig({
   plugins: [
     solidStart({ ssr: false }),
     tailwindcss(),
-    nitro()
+    nitro({ preset: "cloudflare-pages" })
   ]
 });

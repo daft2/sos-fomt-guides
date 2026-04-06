@@ -106,7 +106,7 @@ export default function CropDetail() {
                   <div class="flex flex-col items-center gap-1">
                     <span class="text-xs text-amber-500">{"★".repeat(star)}</span>
                     <span class="text-sm font-medium text-slate-700 dark:text-slate-300">
-                      {c().sellPrices[`star${star}` as keyof typeof c().sellPrices]}G
+                      {(c().sellPrices as Record<string, number>)[`star${star}`]}G
                     </span>
                   </div>
                 ))}
