@@ -1,7 +1,0 @@
-{
-  "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"node -e \\\"\\nconst esbuild = require('esbuild');\\nconst fs = require('fs');\\nconst glob = require('glob') || [];\\nconst path = require('path');\\n\\n// Get all ts/tsx source files\\nconst file...",
-  "error": "Exit code 1\nnode:internal/modules/cjs/loader:1423\n  throw err;\n  ^\n\nError: Cannot find module 'esbuild'\nRequire stack:\n- /Users/daffa/daffa/sos-fomt/[eval]\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1420:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1058:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1063:22)\n    at Module._load (node:internal/modules/cjs/loader:1226:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)...",
-  "timestamp": "2026-04-06T02:25:46.065Z",
-  "retry_count": 1
-}
