@@ -121,6 +121,12 @@
   },
   "hotPaths": [
     {
+      "path": "vite.config.ts",
+      "accessCount": 6,
+      "lastAccessed": 1775444155250,
+      "type": "file"
+    },
+    {
       "path": "package.json",
       "accessCount": 5,
       "lastAccessed": 1775442278582,
@@ -131,12 +137,6 @@
       "accessCount": 5,
       "lastAccessed": 1775442286740,
       "type": "directory"
-    },
-    {
-      "path": "vite.config.ts",
-      "accessCount": 5,
-      "lastAccessed": 1775442527217,
-      "type": "file"
     },
     {
       "path": "src/components/Nav.tsx",
@@ -250,6 +250,12 @@
       "path": "src/lib/i18n.ts",
       "accessCount": 1,
       "lastAccessed": 1775378812318,
+      "type": "file"
+    },
+    {
+      "path": "wrangler.json",
+      "accessCount": 1,
+      "lastAccessed": 1775444146225,
       "type": "file"
     }
   ],
