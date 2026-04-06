@@ -42,7 +42,7 @@ export default function CropsIndex() {
       title={t("crops.title")}
       subtitle={t("crops.subtitle")}
       breadcrumb={
-        <A href="/" class="text-sm text-sky-600 hover:underline dark:text-sky-400">
+        <A href="/" class="text-sm text-accent hover:underline">
           ← {t("nav.home")}
         </A>
       }

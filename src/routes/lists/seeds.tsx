@@ -47,8 +47,8 @@ export default function SeedsList() {
       title="Seeds"
       subtitle="All seeds with grow times and prices"
       breadcrumb={
-        <A href="/lists" class="text-sm text-sky-600 hover:underline dark:text-sky-400">
-          ← {t("lists.title")}
+        <A href="/lists" class="inline-flex items-center gap-1 text-sm text-accent hover:text-accent-dark dark:text-accent-light dark:hover:text-white transition-colors">
+          {"\u2190"} {t("lists.title")}
         </A>
       }
     >
@@ -107,7 +107,7 @@ export default function SeedsList() {
         <div class="grid grid-cols-1 gap-3 md:hidden">
           <For each={filtered()}>
             {(seed) => (
-              <div class="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
+              <div class="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
                 <div class="mb-2 flex items-center justify-between gap-2">
                   <span class="font-semibold text-slate-900 dark:text-slate-100">{seed.name}</span>
                   <Badge class={SEASON_COLORS[seed.season]}>{SEASON_LABELS[seed.season]}</Badge>

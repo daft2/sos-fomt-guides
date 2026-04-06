@@ -25,8 +25,8 @@ export default function LocationsList() {
       title="Town Locations"
       subtitle="All locations in Mineral Town"
       breadcrumb={
-        <A href="/lists" class="text-sm text-sky-600 hover:underline dark:text-sky-400">
-          ← {t("lists.title")}
+        <A href="/lists" class="inline-flex items-center gap-1 text-sm text-accent hover:text-accent-dark dark:text-accent-light dark:hover:text-white transition-colors">
+          {"\u2190"} {t("lists.title")}
         </A>
       }
     >
@@ -35,7 +35,7 @@ export default function LocationsList() {
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <For each={filtered()}>
             {(loc) => (
-              <div class="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
+              <div class="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
                 <div class="mb-2 flex items-start gap-3">
                   <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xs font-bold text-slate-600 dark:bg-slate-800 dark:text-slate-300">
                     {loc.id}

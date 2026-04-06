@@ -11,14 +11,6 @@ import type { GuideCategory } from "~/data/guides/types";
 
 type CategoryFilter = GuideCategory | "all";
 
-const CATEGORY_COLORS: Record<GuideCategory, string> = {
-  tips: "bg-sky-100 text-sky-800 dark:bg-sky-900/40 dark:text-sky-300",
-  farming: "bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300",
-  animals: "bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300",
-  mining: "bg-stone-100 text-stone-800 dark:bg-stone-900/40 dark:text-stone-300",
-  fishing: "bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300",
-  stamina: "bg-rose-100 text-rose-800 dark:bg-rose-900/40 dark:text-rose-300",
-};
 
 const CATEGORY_LABELS: Record<GuideCategory, string> = {
   tips: "Tips & Tricks",
@@ -62,7 +54,7 @@ export default function GuidesIndex() {
       title={t("guides.title")}
       subtitle={t("guides.subtitle")}
       breadcrumb={
-        <A href="/" class="text-sm text-sky-600 hover:underline dark:text-sky-400">
+        <A href="/" class="text-sm text-accent hover:underline">
           ← {t("nav.home")}
         </A>
       }
@@ -80,7 +72,7 @@ export default function GuidesIndex() {
                 href={`/guides/${guide.id}`}
                 subtitle={`${guide.sections.length} sections`}
                 badge={
-                  <Badge class={CATEGORY_COLORS[guide.category]}>
+                  <Badge variant="default">
                     {CATEGORY_LABELS[guide.category]}
                   </Badge>
                 }

@@ -93,7 +93,7 @@ export default function BookmarksPage() {
             <p class="text-slate-500 dark:text-slate-400">{t("bookmarks.empty")}</p>
             <A
               href="/"
-              class="rounded-xl bg-sky-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-600"
+              class="rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-white hover:bg-accent-dark"
             >
               {t("landing.explore")}
             </A>
@@ -118,15 +118,15 @@ export default function BookmarksPage() {
             <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
               <For each={visibleBookmarks()}>
                 {(bm) => (
-                  <li class="flex items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
+                  <li class="flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
                     <div class="flex flex-col gap-1">
                       <A
                         href={`${CATEGORY_HREFS[bm.category]}/${bm.id}`}
-                        class="font-medium text-slate-900 hover:text-sky-600 dark:text-slate-100 dark:hover:text-sky-400"
+                        class="font-medium text-slate-900 hover:text-accent dark:text-slate-100 dark:hover:text-accent-light"
                       >
                         {bm.name}
                       </A>
-                      <Badge variant="category">{t(`nav.${bm.category}`)}</Badge>
+                      <Badge variant="default">{t(`nav.${bm.category}`)}</Badge>
                     </div>
                     <BookmarkButton
                       id={bm.id}

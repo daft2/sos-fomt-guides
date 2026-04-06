@@ -9,14 +9,14 @@ export default function About() {
     <Layout
       title={t("about.title")}
       breadcrumb={
-        <A href="/" class="text-sm text-sky-600 hover:underline dark:text-sky-400">
+        <A href="/" class="text-sm text-accent hover:underline">
           ← {t("nav.home")}
         </A>
       }
     >
       <div class="mx-auto max-w-2xl space-y-6">
         {/* App description */}
-        <div class="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900">
+        <div class="rounded-lg border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900">
           <h2 class="mb-2 font-semibold text-slate-900 dark:text-slate-100">
             {lang() === "id" ? "Tentang Aplikasi Ini" : "About This App"}
           </h2>
@@ -53,7 +53,7 @@ export default function About() {
         </div>
 
         {/* Game info */}
-        <div class="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900">
+        <div class="rounded-lg border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900">
           <h2 class="mb-2 font-semibold text-slate-900 dark:text-slate-100">
             Story of Seasons: Friends of Mineral Town
           </h2>
@@ -67,7 +67,7 @@ export default function About() {
               href="https://www.marv.jp/special/story-of-seasons/fomt/"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-1 rounded-lg border border-slate-200 px-3 py-1.5 text-xs font-medium text-slate-600 hover:border-sky-400 hover:text-sky-600 dark:border-slate-700 dark:text-slate-400 dark:hover:border-sky-500 dark:hover:text-sky-400 transition-colors"
+              class="inline-flex items-center gap-1 rounded-lg border border-slate-200 px-3 py-1.5 text-xs font-medium text-slate-600 hover:border-accent hover:text-accent dark:border-slate-700 dark:text-slate-400 dark:hover:border-accent dark:hover:text-accent transition-colors"
             >
               {lang() === "id" ? "Situs Resmi" : "Official Site"} ↗
             </a>
@@ -75,7 +75,7 @@ export default function About() {
               href="https://store.steampowered.com/app/1175480/Story_of_Seasons_Friends_of_Mineral_Town/"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-1 rounded-lg border border-slate-200 px-3 py-1.5 text-xs font-medium text-slate-600 hover:border-sky-400 hover:text-sky-600 dark:border-slate-700 dark:text-slate-400 dark:hover:border-sky-500 dark:hover:text-sky-400 transition-colors"
+              class="inline-flex items-center gap-1 rounded-lg border border-slate-200 px-3 py-1.5 text-xs font-medium text-slate-600 hover:border-accent hover:text-accent dark:border-slate-700 dark:text-slate-400 dark:hover:border-accent dark:hover:text-accent transition-colors"
             >
               Steam ↗
             </a>
@@ -83,7 +83,7 @@ export default function About() {
         </div>
 
         {/* Data source / credits */}
-        <div class="rounded-2xl border border-amber-200 bg-amber-50 p-6 dark:border-amber-800 dark:bg-amber-900/20">
+        <div class="rounded-lg border border-amber-200 bg-amber-50 p-6 dark:border-amber-800 dark:bg-amber-900/20">
           <h2 class="mb-2 font-semibold text-amber-900 dark:text-amber-300">
             {lang() === "id" ? "Sumber Data" : "Data Sources & Credits"}
           </h2>

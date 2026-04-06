@@ -6,10 +6,9 @@
 
 @theme {
   --font-sans: "Plus Jakarta Sans", sans-serif;
-  --color-sos-green: #16a34a;
-  --color-sos-green-dark: #15803d;
-  --color-sos-brown: #92400e;
-  --color-sos-gold: #d97706;
+  --color-accent: #16a34a;
+  --color-accent-dark: #15803d;
+  --color-accent-light: #bbf7d0;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -28,11 +27,11 @@ html.dark body {
 
 /* Accessible focus-visible styles */
 :focus-visible {
-  @apply outline-none ring-2 ring-sky-500 ring-offset-2;
+  @apply outline-none ring-2 ring-accent ring-offset-2;
 }
 
 html.dark :focus-visible {
-  @apply ring-sky-400 ring-offset-slate-950;
+  @apply ring-accent ring-offset-slate-950;
 }
 
 /* Page content wrapper */

@@ -33,7 +33,7 @@ export default function EventDetail() {
       fallback={
         <Layout
           breadcrumb={
-            <A href="/events" class="text-sm text-sky-600 hover:underline dark:text-sky-400">
+            <A href="/events" class="text-sm text-accent hover:underline">
               ← {t("events.title")}
             </A>
           }
@@ -46,20 +46,20 @@ export default function EventDetail() {
         <Layout
           title={ev().name}
           breadcrumb={
-            <A href="/events" class="text-sm text-sky-600 hover:underline dark:text-sky-400">
+            <A href="/events" class="text-sm text-accent hover:underline">
               ← {t("events.title")}
             </A>
           }
           actions={
             <button
               onClick={() => toggle(ev().id, "events", ev().name)}
-              class={`inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-sm font-medium transition-colors ${
+              class={`inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-medium transition-colors ${
                 isBookmarked(ev().id)
-                  ? "border-sky-400 bg-sky-50 text-sky-700 dark:border-sky-500 dark:bg-sky-900/30 dark:text-sky-300"
-                  : "border-slate-200 bg-white text-slate-600 hover:border-sky-400 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+                  ? "border-accent bg-accent-light/20 text-accent-dark dark:border-accent dark:bg-accent/10 dark:text-accent-light"
+                  : "border-slate-200 bg-white text-slate-600 hover:border-accent dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
               }`}
             >
-              {isBookmarked(ev().id) ? `★ ${t("common.bookmarked")}` : `☆ ${t("common.bookmark")}`}
+              {isBookmarked(ev().id) ? t("common.bookmarked") : t("common.bookmark")}
             </button>
           }
         >
@@ -77,7 +77,7 @@ export default function EventDetail() {
             </p>
 
             {/* Requirements */}
-            <div class="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
+            <div class="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
               <h2 class="mb-3 font-semibold text-slate-900 dark:text-slate-100">Requirements</h2>
               <dl class="space-y-2 text-sm">
                 <Show when={ev().requirements.day}>
@@ -129,7 +129,7 @@ export default function EventDetail() {
 
             {/* Choices */}
             <Show when={ev().choices.length > 0}>
-              <div class="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
+              <div class="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
                 <h2 class="mb-3 font-semibold text-slate-900 dark:text-slate-100">Choices</h2>
                 <div class="space-y-3">
                   <For each={ev().choices}>
@@ -146,7 +146,7 @@ export default function EventDetail() {
 
             {/* Reward */}
             <Show when={ev().reward}>
-              <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 dark:border-amber-800 dark:bg-amber-900/20">
+              <div class="rounded-lg border border-amber-200 bg-amber-50 p-4 dark:border-amber-800 dark:bg-amber-900/20">
                 <p class="text-xs font-medium text-amber-700 dark:text-amber-400">Reward</p>
                 <p class="mt-1 text-sm text-amber-800 dark:text-amber-300">{ev().reward}</p>
               </div>

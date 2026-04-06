@@ -24,8 +24,8 @@ export default function ShopsList() {
       title="Shops"
       subtitle="Shop hours, owners, and items"
       breadcrumb={
-        <A href="/lists" class="text-sm text-sky-600 hover:underline dark:text-sky-400">
-          ← {t("lists.title")}
+        <A href="/lists" class="inline-flex items-center gap-1 text-sm text-accent hover:text-accent-dark dark:text-accent-light dark:hover:text-white transition-colors">
+          {"\u2190"} {t("lists.title")}
         </A>
       }
     >
@@ -34,7 +34,7 @@ export default function ShopsList() {
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <For each={filtered()}>
             {(shop) => (
-              <div class="rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-900">
+              <div class="rounded-lg border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-900">
                 <h2 class="mb-1 font-semibold text-slate-900 dark:text-slate-100">{shop.name}</h2>
                 <p class="mb-3 text-sm text-slate-500 dark:text-slate-400">
                   {shop.owner.join(", ")}

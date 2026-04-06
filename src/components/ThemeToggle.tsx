@@ -1,46 +1,53 @@
 import { Select } from "@kobalte/core/select";
+import { ChevronDown, Sun, Moon, Monitor } from "lucide-solid";
+import { JSX } from "solid-js";
 import { useTheme } from "~/lib/theme";
 
 type Theme = "light" | "dark" | "system";
 
-const THEME_OPTIONS: { value: Theme; label: string }[] = [
-  { value: "light", label: "Light" },
-  { value: "dark", label: "Dark" },
-  { value: "system", label: "System" },
+const THEME_OPTIONS: { value: Theme; label: string; icon: () => JSX.Element }[] = [
+  { value: "light", label: "Light", icon: () => <Sun class="h-4 w-4" /> },
+  { value: "dark", label: "Dark", icon: () => <Moon class="h-4 w-4" /> },
+  { value: "system", label: "System", icon: () => <Monitor class="h-4 w-4" /> },
 ];
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
+
+  const currentOption = () => THEME_OPTIONS.find((o) => o.value === theme());
 
   return (
     <Select
       value={theme()}
       onChange={(val) => val && setTheme(val as Theme)}
       options={THEME_OPTIONS.map((o) => o.value)}
-      itemComponent={(props) => (
-        <Select.Item
-          item={props.item}
-          class="px-3 py-1.5 text-sm cursor-pointer rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 outline-none data-[highlighted]:bg-gray-100 dark:data-[highlighted]:bg-gray-700"
-        >
-          <Select.ItemLabel>
-            {THEME_OPTIONS.find((o) => o.value === props.item.rawValue)?.label}
-          </Select.ItemLabel>
-        </Select.Item>
-      )}
+      itemComponent={(props) => {
+        const opt = THEME_OPTIONS.find((o) => o.value === props.item.rawValue);
+        return (
+          <Select.Item
+            item={props.item}
+            class="flex items-center gap-2 px-3 py-1.5 text-sm cursor-pointer rounded hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 outline-none data-[highlighted]:bg-slate-100 dark:data-[highlighted]:bg-slate-700"
+          >
+            {opt?.icon()}
+            <Select.ItemLabel>{opt?.label}</Select.ItemLabel>
+          </Select.Item>
+        );
+      }}
     >
       <Select.Trigger
-        class="flex items-center gap-1 px-2 py-1 text-sm rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+        class="flex items-center gap-1.5 px-2 py-1 text-sm rounded border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
         aria-label="Toggle theme"
       >
         <Select.Value<Theme>>
-          {(state) =>
-            THEME_OPTIONS.find((o) => o.value === state.selectedOption())?.label ?? "Theme"
-          }
+          {(state) => {
+            const opt = THEME_OPTIONS.find((o) => o.value === state.selectedOption());
+            return opt ? opt.icon() : <Sun class="h-4 w-4" />;
+          }}
         </Select.Value>
-        <span class="text-xs opacity-60">▾</span>
+        <ChevronDown class="h-3.5 w-3.5 opacity-60" />
       </Select.Trigger>
       <Select.Portal>
-        <Select.Content class="z-50 min-w-[8rem] rounded border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-md p-1">
+        <Select.Content class="z-50 min-w-[8rem] rounded border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm p-1">
           <Select.Listbox />
         </Select.Content>
       </Select.Portal>

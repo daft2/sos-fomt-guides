@@ -1,4 +1,4 @@
-import { createSignal, createMemo, For } from "solid-js";
+import { createSignal, createMemo, For, Show } from "solid-js";
 import { A } from "@solidjs/router";
 import { useI18n } from "~/lib/i18n";
 import Layout from "~/components/Layout";
@@ -42,9 +42,21 @@ export default function CharactersIndex() {
 
   const tabs = [
     { value: "all" as CategoryFilter, label: t("common.all"), count: characters.length },
-    { value: "bachelor" as CategoryFilter, label: lang() === "id" ? "Bujangan" : "Bachelors", count: bachelors.length },
-    { value: "bachelorette" as CategoryFilter, label: lang() === "id" ? "Gadis" : "Bachelorettes", count: bachelorettes.length },
-    { value: "special" as CategoryFilter, label: lang() === "id" ? "Spesial" : "Special", count: special.length },
+    {
+      value: "bachelor" as CategoryFilter,
+      label: lang() === "id" ? "Bujangan" : "Bachelors",
+      count: bachelors.length,
+    },
+    {
+      value: "bachelorette" as CategoryFilter,
+      label: lang() === "id" ? "Gadis" : "Bachelorettes",
+      count: bachelorettes.length,
+    },
+    {
+      value: "special" as CategoryFilter,
+      label: lang() === "id" ? "Spesial" : "Special",
+      count: special.length,
+    },
   ];
 
   return (
@@ -52,37 +64,44 @@ export default function CharactersIndex() {
       title={t("characters.title")}
       subtitle={t("characters.subtitle")}
       breadcrumb={
-        <A href="/" class="text-sm text-sky-600 hover:underline dark:text-sky-400">
+        <A href="/" class="inline-flex items-center gap-1 text-sm text-accent hover:text-accent-dark dark:text-accent-light dark:hover:text-white transition-colors">
           ← {t("nav.home")}
         </A>
       }
     >
-      <div class="space-y-4">
+      <div class="space-y-6">
         <SearchBar value={query()} onInput={setQuery} placeholder={t("common.search")} />
         <FilterTabs tabs={tabs} active={filter()} onChange={setFilter} />
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          <For each={filtered()}>
-            {(char) => (
-              <DataCard
-                id={char.id}
-                category="characters"
-                name={char.name}
-                href={`/characters/${char.id}`}
-                subtitle={`${t("characters.birthday")}: ${char.birthday}`}
-                badge={
-                  <Badge class={CATEGORY_COLORS[char.category]}>
-                    {lang() === "id"
-                      ? CATEGORY_LABELS[char.category].id
-                      : CATEGORY_LABELS[char.category].en}
-                  </Badge>
-                }
-              />
-            )}
-          </For>
-        </div>
-        {filtered().length === 0 && (
-          <p class="py-12 text-center text-slate-400 dark:text-slate-500">{t("common.notFound")}</p>
-        )}
+
+        <Show
+          when={filtered().length > 0}
+          fallback={
+            <p class="py-16 text-center text-slate-400 dark:text-slate-500">
+              {t("common.notFound")}
+            </p>
+          }
+        >
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <For each={filtered()}>
+              {(char) => (
+                <DataCard
+                  id={char.id}
+                  category="characters"
+                  name={char.name}
+                  href={`/characters/${char.id}`}
+                  subtitle={`${t("characters.birthday")}: ${char.birthday}`}
+                  badge={
+                    <Badge class={CATEGORY_COLORS[char.category]}>
+                      {lang() === "id"
+                        ? CATEGORY_LABELS[char.category].id
+                        : CATEGORY_LABELS[char.category].en}
+                    </Badge>
+                  }
+                />
+              )}
+            </For>
+          </div>
+        </Show>
       </div>
     </Layout>
   );

@@ -27,7 +27,7 @@ export default function CropDetail() {
       fallback={
         <Layout
           breadcrumb={
-            <A href="/crops" class="text-sm text-sky-600 hover:underline dark:text-sky-400">
+            <A href="/crops" class="text-sm text-accent hover:underline">
               ← {t("crops.title")}
             </A>
           }
@@ -40,20 +40,20 @@ export default function CropDetail() {
         <Layout
           title={c().name}
           breadcrumb={
-            <A href="/crops" class="text-sm text-sky-600 hover:underline dark:text-sky-400">
+            <A href="/crops" class="text-sm text-accent hover:underline">
               ← {t("crops.title")}
             </A>
           }
           actions={
             <button
               onClick={() => toggle(c().id, "crops", c().name)}
-              class={`inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-sm font-medium transition-colors ${
+              class={`inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-medium transition-colors ${
                 isBookmarked(c().id)
-                  ? "border-sky-400 bg-sky-50 text-sky-700 dark:border-sky-500 dark:bg-sky-900/30 dark:text-sky-300"
-                  : "border-slate-200 bg-white text-slate-600 hover:border-sky-400 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+                  ? "border-accent bg-accent-light/20 text-accent-dark dark:border-accent dark:bg-accent/10 dark:text-accent-light"
+                  : "border-slate-200 bg-white text-slate-600 hover:border-accent dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
               }`}
             >
-              {isBookmarked(c().id) ? `★ ${t("common.bookmarked")}` : `☆ ${t("common.bookmark")}`}
+              {isBookmarked(c().id) ? t("common.bookmarked") : t("common.bookmark")}
             </button>
           }
         >
@@ -64,10 +64,10 @@ export default function CropDetail() {
                 {t(`common.season.${c().season === "autumn" ? "fall" : c().season}`)}
               </Badge>
               {c().isFlower && (
-                <Badge variant="category">Flower</Badge>
+                <Badge variant="default">Flower</Badge>
               )}
               {c().unlockRequirement && (
-                <Badge variant="rarity">Unlockable</Badge>
+                <Badge variant="accent">Unlockable</Badge>
               )}
             </div>
 
@@ -78,33 +78,33 @@ export default function CropDetail() {
 
             {/* Stats grid */}
             <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
-              <div class="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
+              <div class="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
                 <p class="text-xs text-slate-400 dark:text-slate-500">{t("crops.buyPrice")}</p>
                 <p class="mt-1 text-lg font-semibold text-slate-900 dark:text-slate-100">{c().buyPrice}G</p>
               </div>
-              <div class="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
+              <div class="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
                 <p class="text-xs text-slate-400 dark:text-slate-500">{t("crops.days")}</p>
                 <p class="mt-1 text-lg font-semibold text-slate-900 dark:text-slate-100">{c().growthDays.harvest}d</p>
               </div>
-              <div class="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
+              <div class="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
                 <p class="text-xs text-slate-400 dark:text-slate-500">{t("crops.regrowDays")}</p>
                 <p class="mt-1 text-lg font-semibold text-slate-900 dark:text-slate-100">
                   {c().regrowDays ? `${c().regrowDays}d` : "—"}
                 </p>
               </div>
-              <div class="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
+              <div class="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
                 <p class="text-xs text-slate-400 dark:text-slate-500">{t("crops.source")}</p>
                 <p class="mt-1 text-sm font-medium text-slate-900 dark:text-slate-100">{c().source}</p>
               </div>
             </div>
 
             {/* Sell prices */}
-            <div class="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
+            <div class="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
               <h2 class="mb-3 font-semibold text-slate-900 dark:text-slate-100">{t("crops.sellPrice")}</h2>
               <div class="grid grid-cols-5 gap-2">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <div class="flex flex-col items-center gap-1">
-                    <span class="text-xs text-amber-500">{"★".repeat(star)}</span>
+                    <span class="text-xs font-medium text-slate-400">{star}</span>
                     <span class="text-sm font-medium text-slate-700 dark:text-slate-300">
                       {(c().sellPrices as Record<string, number>)[`star${star}`]}G
                     </span>
@@ -115,7 +115,7 @@ export default function CropDetail() {
 
             {/* Unlock requirement */}
             <Show when={c().unlockRequirement}>
-              <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 dark:border-amber-800 dark:bg-amber-900/20">
+              <div class="rounded-lg border border-amber-200 bg-amber-50 p-4 dark:border-amber-800 dark:bg-amber-900/20">
                 <p class="text-xs font-medium text-amber-700 dark:text-amber-400">Unlock Requirement</p>
                 <p class="mt-1 text-sm text-amber-800 dark:text-amber-300">{c().unlockRequirement}</p>
               </div>

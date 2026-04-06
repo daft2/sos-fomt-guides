@@ -11,22 +11,22 @@ interface LayoutProps {
 const Layout: ParentComponent<LayoutProps> = (props) => {
   return (
     <main class={`min-h-screen ${props.class ?? ""}`}>
-      <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
         <Show when={props.breadcrumb}>
-          <div class="mb-4">{props.breadcrumb}</div>
+          <div class="mb-5">{props.breadcrumb}</div>
         </Show>
         <Show when={props.title}>
-          <div class="mb-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <h1 class="text-2xl font-bold text-slate-900 dark:text-slate-100 sm:text-3xl">
+          <div class="mb-8 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+            <div class="flex flex-col gap-1">
+              <h1 class="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-50 sm:text-3xl">
                 {props.title}
               </h1>
               <Show when={props.subtitle}>
-                <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">{props.subtitle}</p>
+                <p class="text-sm text-slate-500 dark:text-slate-400">{props.subtitle}</p>
               </Show>
             </div>
             <Show when={props.actions}>
-              <div class="flex items-center gap-2">{props.actions}</div>
+              <div class="flex shrink-0 items-center gap-2">{props.actions}</div>
             </Show>
           </div>
         </Show>

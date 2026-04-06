@@ -121,39 +121,141 @@
   },
   "hotPaths": [
     {
+      "path": "",
+      "accessCount": 17,
+      "lastAccessed": 1775446934441,
+      "type": "directory"
+    },
+    {
       "path": "vite.config.ts",
       "accessCount": 13,
       "lastAccessed": 1775445459275,
       "type": "file"
     },
     {
-      "path": "package.json",
-      "accessCount": 6,
-      "lastAccessed": 1775444637901,
+      "path": "src/routes/index.tsx",
+      "accessCount": 13,
+      "lastAccessed": 1775449181643,
       "type": "file"
-    },
-    {
-      "path": "",
-      "accessCount": 5,
-      "lastAccessed": 1775442286740,
-      "type": "directory"
     },
     {
       "path": "src/components/Nav.tsx",
-      "accessCount": 4,
-      "lastAccessed": 1775376176960,
-      "type": "file"
-    },
-    {
-      "path": "src/app.css",
-      "accessCount": 4,
-      "lastAccessed": 1775376188569,
+      "accessCount": 11,
+      "lastAccessed": 1775448976857,
       "type": "file"
     },
     {
       "path": "src/routes/crops/[id].tsx",
-      "accessCount": 4,
-      "lastAccessed": 1775442423342,
+      "accessCount": 11,
+      "lastAccessed": 1775449317257,
+      "type": "file"
+    },
+    {
+      "path": "src/app.css",
+      "accessCount": 10,
+      "lastAccessed": 1775448789355,
+      "type": "file"
+    },
+    {
+      "path": "src/components/ThemeToggle.tsx",
+      "accessCount": 10,
+      "lastAccessed": 1775449009417,
+      "type": "file"
+    },
+    {
+      "path": "src/routes/guides/index.tsx",
+      "accessCount": 9,
+      "lastAccessed": 1775449366168,
+      "type": "file"
+    },
+    {
+      "path": "src",
+      "accessCount": 9,
+      "lastAccessed": 1775449399379,
+      "type": "directory"
+    },
+    {
+      "path": "src/routes/guides/[id].tsx",
+      "accessCount": 8,
+      "lastAccessed": 1775449299717,
+      "type": "file"
+    },
+    {
+      "path": "src/routes/characters/[id].tsx",
+      "accessCount": 8,
+      "lastAccessed": 1775449343436,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 7,
+      "lastAccessed": 1775445890284,
+      "type": "file"
+    },
+    {
+      "path": "src/components/LanguageToggle.tsx",
+      "accessCount": 7,
+      "lastAccessed": 1775448859400,
+      "type": "file"
+    },
+    {
+      "path": "src/components/DataCard.tsx",
+      "accessCount": 7,
+      "lastAccessed": 1775448924580,
+      "type": "file"
+    },
+    {
+      "path": "src/components/CategoryCard.tsx",
+      "accessCount": 7,
+      "lastAccessed": 1775448932937,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Layout.tsx",
+      "accessCount": 7,
+      "lastAccessed": 1775448993367,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Badge.tsx",
+      "accessCount": 6,
+      "lastAccessed": 1775448935674,
+      "type": "file"
+    },
+    {
+      "path": "src/components/FilterTabs.tsx",
+      "accessCount": 6,
+      "lastAccessed": 1775448965708,
+      "type": "file"
+    },
+    {
+      "path": "src/components/BookmarkButton.tsx",
+      "accessCount": 6,
+      "lastAccessed": 1775448992204,
+      "type": "file"
+    },
+    {
+      "path": "src/routes/events/[id].tsx",
+      "accessCount": 6,
+      "lastAccessed": 1775449279824,
+      "type": "file"
+    },
+    {
+      "path": "src/routes/festivals/[id].tsx",
+      "accessCount": 6,
+      "lastAccessed": 1775449318266,
+      "type": "file"
+    },
+    {
+      "path": "src/routes/bookmarks.tsx",
+      "accessCount": 6,
+      "lastAccessed": 1775449342041,
+      "type": "file"
+    },
+    {
+      "path": "src/components/SearchBar.tsx",
+      "accessCount": 5,
+      "lastAccessed": 1775448966589,
       "type": "file"
     },
     {
@@ -163,22 +265,34 @@
       "type": "file"
     },
     {
-      "path": "src/routes/index.tsx",
-      "accessCount": 3,
-      "lastAccessed": 1775376132216,
-      "type": "file"
-    },
-    {
       "path": "src/app.tsx",
-      "accessCount": 3,
-      "lastAccessed": 1775376147876,
+      "accessCount": 4,
+      "lastAccessed": 1775446910597,
       "type": "file"
     },
     {
-      "path": "src",
-      "accessCount": 3,
-      "lastAccessed": 1775378835000,
-      "type": "directory"
+      "path": "src/routes/about.tsx",
+      "accessCount": 4,
+      "lastAccessed": 1775448397671,
+      "type": "file"
+    },
+    {
+      "path": "src/routes/[...404].tsx",
+      "accessCount": 4,
+      "lastAccessed": 1775448581548,
+      "type": "file"
+    },
+    {
+      "path": "src/routes/characters/index.tsx",
+      "accessCount": 4,
+      "lastAccessed": 1775448754129,
+      "type": "file"
+    },
+    {
+      "path": "src/routes/recipes/[id].tsx",
+      "accessCount": 4,
+      "lastAccessed": 1775449276367,
+      "type": "file"
     },
     {
       "path": "src/lib/createStorageSignal.ts",
@@ -193,33 +307,63 @@
       "type": "file"
     },
     {
-      "path": "src/components/ThemeToggle.tsx",
+      "path": "src/lib/theme.ts",
       "accessCount": 2,
-      "lastAccessed": 1775376141142,
+      "lastAccessed": 1775446918557,
       "type": "file"
     },
     {
-      "path": "src/routes/about.tsx",
+      "path": "src/lib/i18n.ts",
       "accessCount": 2,
-      "lastAccessed": 1775376153778,
+      "lastAccessed": 1775446918944,
       "type": "file"
     },
     {
-      "path": "src/routes/[...404].tsx",
+      "path": "src/data/characters/types.ts",
       "accessCount": 2,
-      "lastAccessed": 1775376156254,
+      "lastAccessed": 1775446925592,
       "type": "file"
     },
     {
-      "path": "src/routes/events/[id].tsx",
+      "path": "src/data/events/types.ts",
       "accessCount": 2,
-      "lastAccessed": 1775378687851,
+      "lastAccessed": 1775448619008,
       "type": "file"
     },
     {
-      "path": "src/components/LanguageToggle.tsx",
+      "path": "src/data/festivals/types.ts",
       "accessCount": 2,
-      "lastAccessed": 1775378829484,
+      "lastAccessed": 1775448619532,
+      "type": "file"
+    },
+    {
+      "path": "src/routes/festivals/index.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1775448689913,
+      "type": "file"
+    },
+    {
+      "path": "src/routes/events/index.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1775448735186,
+      "type": "file"
+    },
+    {
+      "path": "src/routes/crops/index.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1775448857274,
+      "type": "file"
+    },
+    {
+      "path": "src/routes/recipes/index.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1775448894928,
+      "type": "file"
+    },
+    {
+      "path": "src/routes/lists/index.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1775448933311,
       "type": "file"
     },
     {
@@ -235,12 +379,6 @@
       "type": "file"
     },
     {
-      "path": "src/lib/theme.ts",
-      "accessCount": 1,
-      "lastAccessed": 1775376100842,
-      "type": "file"
-    },
-    {
       "path": "src/data/items.ts",
       "accessCount": 1,
       "lastAccessed": 1775376107109,
@@ -253,9 +391,33 @@
       "type": "directory"
     },
     {
-      "path": "src/lib/i18n.ts",
+      "path": "src/data/recipes/types.ts",
       "accessCount": 1,
-      "lastAccessed": 1775378812318,
+      "lastAccessed": 1775446339638,
+      "type": "file"
+    },
+    {
+      "path": "src/data/events/index.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775446914269,
+      "type": "file"
+    },
+    {
+      "path": "src/data/festivals/index.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775446914498,
+      "type": "file"
+    },
+    {
+      "path": "src/data/characters/index.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775446926252,
+      "type": "file"
+    },
+    {
+      "path": "src/data/characters/rick.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775446931022,
       "type": "file"
     }
   ],

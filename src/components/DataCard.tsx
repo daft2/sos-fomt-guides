@@ -18,10 +18,10 @@ interface DataCardProps {
 export default function DataCard(props: DataCardProps) {
   return (
     <div
-      class={`group relative flex flex-col rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:border-sky-400 hover:shadow-md dark:border-slate-700 dark:bg-slate-900 dark:hover:border-sky-500 ${props.class ?? ""}`}
+      class={`group relative flex flex-col rounded-lg border border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900 ${props.class ?? ""}`}
     >
       <Show when={props.image}>
-        <div class="aspect-video w-full overflow-hidden rounded-t-2xl bg-slate-100 dark:bg-slate-800">
+        <div class="aspect-video w-full overflow-hidden rounded-t-lg bg-slate-100 dark:bg-slate-800">
           <img
             src={props.image}
             alt={props.name}
@@ -30,20 +30,20 @@ export default function DataCard(props: DataCardProps) {
           />
         </div>
       </Show>
-      <div class="flex flex-1 flex-col gap-2 p-4">
+      <div class="flex flex-1 flex-col gap-2 p-4 hover:bg-slate-50 dark:hover:bg-slate-800/50">
         <div class="flex items-start justify-between gap-2">
           <A
             href={props.href}
-            class="flex-1 font-semibold text-slate-900 hover:text-sky-600 dark:text-slate-100 dark:hover:text-sky-400"
+            class="flex-1 font-semibold leading-snug text-slate-900 hover:text-accent-dark dark:text-slate-100 dark:hover:text-green-400"
           >
             {props.name}
           </A>
           <BookmarkButton id={props.id} category={props.category} name={props.name} />
         </div>
         <Show when={props.subtitle}>
-          <p class="text-sm text-slate-500 dark:text-slate-400">{props.subtitle}</p>
+          <p class="text-sm leading-relaxed text-slate-500 dark:text-slate-400">{props.subtitle}</p>
         </Show>
-        <div class="mt-auto flex items-center justify-between gap-2">
+        <div class="mt-auto flex items-center gap-2 pt-1">
           <Show when={props.badge}>{props.badge}</Show>
           <Show when={props.meta}>
             <span class="ml-auto text-xs text-slate-400 dark:text-slate-500">{props.meta}</span>

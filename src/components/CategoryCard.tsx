@@ -14,23 +14,21 @@ export default function CategoryCard(props: CategoryCardProps) {
   return (
     <A
       href={props.href}
-      class={`group flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:border-sky-400 hover:shadow-md dark:border-slate-700 dark:bg-slate-900 dark:hover:border-sky-500 ${props.class ?? ""}`}
+      class={`group flex flex-col gap-2 rounded-lg border border-slate-200 bg-white p-5 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:hover:bg-slate-800/50 ${props.class ?? ""}`}
     >
-      {props.icon && (
-        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-50 text-sky-600 dark:bg-sky-900/30 dark:text-sky-400">
-          {props.icon}
-        </div>
-      )}
-      <div class="flex flex-col gap-1">
-        <h3 class="font-semibold text-slate-900 group-hover:text-sky-600 dark:text-slate-100 dark:group-hover:text-sky-400">
+      <div class="flex items-center gap-3">
+        {props.icon && (
+          <span class="text-accent">{props.icon}</span>
+        )}
+        <h3 class="font-semibold text-slate-900 group-hover:text-accent-dark dark:text-slate-100 dark:group-hover:text-green-400">
           {props.title}
         </h3>
-        {props.description && (
-          <p class="text-sm text-slate-500 dark:text-slate-400">{props.description}</p>
-        )}
       </div>
+      {props.description && (
+        <p class="text-sm leading-relaxed text-slate-500 dark:text-slate-400">{props.description}</p>
+      )}
       {props.count !== undefined && (
-        <span class="mt-auto text-xs text-slate-400 dark:text-slate-500">
+        <span class="text-xs text-slate-400 dark:text-slate-500">
           {props.count} items
         </span>
       )}

@@ -43,8 +43,8 @@ export default function OutfitsList() {
       title="Outfits"
       subtitle="Costumes and how to unlock them"
       breadcrumb={
-        <A href="/lists" class="text-sm text-sky-600 hover:underline dark:text-sky-400">
-          ← {t("lists.title")}
+        <A href="/lists" class="inline-flex items-center gap-1 text-sm text-accent hover:text-accent-dark dark:text-accent-light dark:hover:text-white transition-colors">
+          {"\u2190"} {t("lists.title")}
         </A>
       }
     >
@@ -53,7 +53,7 @@ export default function OutfitsList() {
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <For each={filtered()}>
             {(outfit) => (
-              <div class="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
+              <div class="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
                 <div class="mb-2 flex items-start justify-between gap-2">
                   <h3 class="font-semibold text-slate-900 dark:text-slate-100">{outfit.name}</h3>
                   <Badge class={TYPE_COLORS[outfit.type]}>{TYPE_LABELS[outfit.type]}</Badge>

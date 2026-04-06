@@ -21,7 +21,7 @@ export default function RecipeDetail() {
       fallback={
         <Layout
           breadcrumb={
-            <A href="/recipes" class="text-sm text-sky-600 hover:underline dark:text-sky-400">
+            <A href="/recipes" class="text-sm text-accent hover:underline">
               ← {t("recipes.title")}
             </A>
           }
@@ -34,20 +34,20 @@ export default function RecipeDetail() {
         <Layout
           title={r().name}
           breadcrumb={
-            <A href="/recipes" class="text-sm text-sky-600 hover:underline dark:text-sky-400">
+            <A href="/recipes" class="text-sm text-accent hover:underline">
               ← {t("recipes.title")}
             </A>
           }
           actions={
             <button
               onClick={() => toggle(bookmarkId(), "recipes", r().name)}
-              class={`inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-sm font-medium transition-colors ${
+              class={`inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-medium transition-colors ${
                 isBookmarked(bookmarkId())
-                  ? "border-sky-400 bg-sky-50 text-sky-700 dark:border-sky-500 dark:bg-sky-900/30 dark:text-sky-300"
-                  : "border-slate-200 bg-white text-slate-600 hover:border-sky-400 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+                  ? "border-accent bg-accent-light/20 text-accent-dark dark:border-accent dark:bg-accent/10 dark:text-accent-light"
+                  : "border-slate-200 bg-white text-slate-600 hover:border-accent dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
               }`}
             >
-              {isBookmarked(bookmarkId()) ? `★ ${t("common.bookmarked")}` : `☆ ${t("common.bookmark")}`}
+              {isBookmarked(bookmarkId()) ? t("common.bookmarked") : t("common.bookmark")}
             </button>
           }
         >
@@ -62,7 +62,7 @@ export default function RecipeDetail() {
             {/* Stats grid */}
             <div class="grid grid-cols-2 gap-4">
               {r().stamina != null && (
-                <div class="rounded-xl border border-green-200 bg-green-50 p-4 dark:border-green-900/50 dark:bg-green-900/10">
+                <div class="rounded-lg border border-green-200 bg-green-50 p-4 dark:border-green-900/50 dark:bg-green-900/10">
                   <p class="text-xs text-slate-400 dark:text-slate-500">
                     {lang() === "id" ? "Stamina" : "Stamina"}
                   </p>
@@ -72,7 +72,7 @@ export default function RecipeDetail() {
                 </div>
               )}
               {r().fatigue != null && (
-                <div class="rounded-xl border border-blue-200 bg-blue-50 p-4 dark:border-blue-900/50 dark:bg-blue-900/10">
+                <div class="rounded-lg border border-blue-200 bg-blue-50 p-4 dark:border-blue-900/50 dark:bg-blue-900/10">
                   <p class="text-xs text-slate-400 dark:text-slate-500">
                     {lang() === "id" ? "Kelelahan" : "Fatigue"}
                   </p>
@@ -82,13 +82,13 @@ export default function RecipeDetail() {
                 </div>
               )}
               {r().stamina == null && r().fatigue == null && (
-                <div class="col-span-2 rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800/50">
+                <div class="col-span-2 rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800/50">
                   <p class="text-sm text-slate-500 dark:text-slate-400">
                     {lang() === "id" ? "Tidak bisa dimakan" : "Cannot be eaten"}
                   </p>
                 </div>
               )}
-              <div class="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
+              <div class="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
                 <p class="text-xs text-slate-400 dark:text-slate-500">
                   {lang() === "id" ? "Harga Jual" : "Sell Price"}
                 </p>
@@ -100,7 +100,7 @@ export default function RecipeDetail() {
 
             {/* Utensils */}
             {r().utensils.length > 0 && (
-              <div class="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
+              <div class="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
                 <p class="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
                   {lang() === "id" ? "Peralatan Masak" : "Cooking Utensils"}
                 </p>
@@ -117,7 +117,7 @@ export default function RecipeDetail() {
             )}
 
             {/* Ingredients */}
-            <div class="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
+            <div class="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
               <p class="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
                 {t("recipes.ingredients")}
               </p>
@@ -133,7 +133,7 @@ export default function RecipeDetail() {
             </div>
 
             {/* How to obtain */}
-            <div class="rounded-xl border border-sky-200 bg-sky-50 p-4 dark:border-sky-900/50 dark:bg-sky-900/10">
+            <div class="rounded-lg border border-accent-light bg-accent-light/20 p-4 dark:border-accent/30 dark:bg-accent/10">
               <p class="mb-1 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
                 {t("recipes.howToLearn")}
               </p>
