@@ -122,8 +122,8 @@
   "hotPaths": [
     {
       "path": "vite.config.ts",
-      "accessCount": 9,
-      "lastAccessed": 1775444746425,
+      "accessCount": 11,
+      "lastAccessed": 1775445260256,
       "type": "file"
     },
     {
